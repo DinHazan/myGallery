@@ -1,0 +1,239 @@
+h1 {
+    font-family: "Magic School Two", Verdana, Tahoma;
+    font-size: 75px;
+    color: grey;
+    text-shadow: 1px 1px black, 2px 2px black, 3px 3px grey, 4px 4px black, 5px 5px black, 6px 6px black;
+    
+}
+h2{
+    font-family: "Magic School Two", Verdana, Tahoma;
+    font-size: 30px;
+    color: grey;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    max-width: 500px;
+    margin: auto;
+}
+
+@font-face {
+    font-family: "Magic School Two";
+    src: url(HARRYP__.TTF) format("truetype");
+}
+
+.covered {
+    background-color: gray;
+    border: 3px solid darkgrey;
+    padding: 2px 2px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+div table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+
+}
+
+td {
+    color: blue;
+    background-color: gray;
+    border: 3px ridge darkgrey;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+div table button {
+    color: blue;
+    background-color: gray;
+    border: 3px ridge darkgrey;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+
+}
+
+.marked {
+    color: blue;
+    background-color: gray;
+    border: 3px ridge darkgrey;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.numBox {
+    width: 22px;
+    height: 22px;
+    border: 1px solid darkgray;
+    font-size: 20px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.timer {
+    width: 22px;
+    line-height: 22px;
+    font-family: arial, verdana;
+    text-align: center;
+    display: table-cell
+}
+
+.statusBar {
+    width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: table;
+    background-color: lightgrey;
+    border-radius: 5px;    
+}
+.emoji{
+    display: table-cell;
+    margin:auto ;
+    padding: auto;
+}
+.diff {
+    display: table-cell;
+    border-radius: 5px;
+}
+
+.table {
+    display: table-row;
+}
+
+div button {
+    color: blue;
+    background-color: gray;
+    display: table-cell;
+    padding: 2px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Reset {
+    color: blue; 
+    height: 1 px;
+    width: 1px;
+    display: table-cell;
+    padding: 2px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.score{
+    width: 22px;
+    line-height: 22px;
+    font-family: arial, verdana;
+    text-align: center;
+    display: table-cell;
+    border-radius: 5px;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    -webkit-animation-name: fadeIn; 
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: grey;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    font-family: "Magic School Two", Verdana, Tahoma;
+    font-size: 30px;
+    color: black;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: gray;
+    color: black;
+    font-family: "Magic School Two", Verdana, Tahoma;
+    font-size: 30px;
+    color: grey;
+    text-shadow: 1px 1px black, 2px 2px black;
+}
+
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}

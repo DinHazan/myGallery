@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 56, 62, 0.87);
+}
+
+.header{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.table-container {
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    
+}
+
+.read-modal img {
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin: auto
+}
+
+span {
+    display: block;
+}
+

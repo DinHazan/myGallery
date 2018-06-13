@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bs4/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book Store</title>
+</head>
+
+<body onload="init()">
+
+    <h1 class="header display-4 shadow-lg p-3 mb-5 rounded">Wellcome To My Book Shop</h1>
+
+<div class="new-book-modal">
+    <div class="modal fade " id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Create New Book</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <input type="text" id="orangeForm-name" class="form-control validate book-name">
+                        <label data-error="wrong" data-success="right" for="orangeForm-name">Book Name</label>
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <input type="text" id="orangeForm-email" class="form-control validate book-price">
+                        <label data-error="wrong" data-success="right" for="orangeForm-email">Book Price</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file Book-img">
+                        <label for="exampleFormControlFile1">Book Image</label>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-deep-orange" data-toggle="modal" data-target="#modalRegisterForm" onclick="readAndAddNewBook()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="text-center">
+        <a href="" class="btn btn-default  btn-outline-secondary btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Add A New Book</a>
+    </div> 
+</div>
+    
+    <div class="table-container"></div>
+
+<div class="read-modal">
+    <div class="modal fade" id="booksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bs4/js/bootstrap.bundle.js"></script>
+    <script src="js/util-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

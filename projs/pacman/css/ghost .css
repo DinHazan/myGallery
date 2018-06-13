@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+.ghost{
+    display: flex;
+    position: absolute;
+}
+[class^="colum-"] >div {
+    width: 5px;
+    background-color: blue;
+    margin: 0.5px 0.5px;
+    padding: 2px;
+}
+[class^="colum-"]{
+    position: relative;
+}
+
+.colum-1{
+    top:20px;
+}
+.colum-2{
+    top:18px;
+}
+.colum-3{
+    top:16px;
+}
+.colum-4{
+    top:14px;
+}
+.colum-5{
+    top:14px;
+}
+.colum-6{
+    top:12px;
+}
+.colum-7{
+    top:8px;
+}
+.colum-8{
+    top:8px;
+}
+.colum-9{
+    top:12px;
+}
+.colum-10{
+    top:14px;
+}
+.colum-11{
+    top:14px;
+}
+.colum-12{
+    top:16px;
+}
+.colum-13{
+    top:18px;
+}
+.colum-14{
+    top:20px;
+}
