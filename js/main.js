@@ -6,9 +6,7 @@ console.log('Starting up');
 function init() {
     renderProtfilo()
 }
-// var gProjs = []
 
-// function createProj
 var gProjs = [
      {
         id: "bookStore",
