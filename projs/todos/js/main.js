@@ -45,20 +45,10 @@ function addTodo() {
 
 
 function setFilter(strFilter) {
-    debugger
     gTodosFilter = strFilter;
     renderTodos();
 }
 
-/*
- <li class="todo" onclick="todoClicked(this)">
-    Todo 1
-    <div class="btns">
-        <button class="btn btn-danger" onclick="deleteTodo(event, 0)">x</button>
-    </div>
-</li>
-
-*/
 
 
 function renderTodos() {
@@ -73,16 +63,17 @@ function renderTodos() {
             <li class="todo ${className}" onclick="todoClicked(this, ${idx})">
                 ${todo.txt}
                 <div class="btns">
-                    <button class="btn btn-danger" onclick="deleteTodo(event, ${idx})">x</button>
-                    <button class="sort-btn btn-up">⬆️</button>
-                    <button class="sort-btn btn-down">⬇️</button>
+                <button class="sort-btn btn-up" onclick="sortUp(event, ${idx})">▲</button>
+                <button class="sort-btn btn-down" onclick="sortDown(event, ${idx})">▼</button>
+                <button class="btn btn-danger" onclick="deleteTodo(event, ${idx})">x</button>
                 </div>  
             </li>
             `
     })
     document.querySelector('.todos').innerHTML = strHTML;
     displayNonFilterBtn()
-    
+    removeArrow()
+
 }
 
 
@@ -204,13 +195,13 @@ function nonToDoMessage() {
 function displayNonFilterBtn() {
     var elBtnUp = document.querySelector('.btn-up')
     var elBtnDown = document.querySelector('.btn-down')
-    if (elBtnDown.style.display === 'none' && gTodosFilter !== 'All' ){
-        return 
-    }else{
+    if (elBtnDown.style.display === 'none' && gTodosFilter !== 'All') {
+        return
+    } else {
         if (gTodosFilter === 'All') {
             elBtnUp.style.display = 'inline-block'
             elBtnDown.style.display = 'inline-block'
-            
+
         } else {
             elBtnUp.style.display = 'none'
             elBtnDown.style.display = 'none'
@@ -218,12 +209,21 @@ function displayNonFilterBtn() {
     }
 }
 
-// function sortUp(idx) {
-//     var currentTodo = gTodos.splice(idx, 1)
-//     gTodos.splice(idx - 1, 0, currentTodo)
-// }
+function sortUp(ev, idx) {
+    ev.stopPropagation()
+    arrayMove(gTodos, idx, idx - 1)
+    renderTodos()
+}
 
-// function sortDown(idx) {
-//     var currentTodo = gTodos.splice(idx, 1)
-//     gTodos.splice(idx + 1, 0, currentTodo)
-// }
+function sortDown(ev, idx) {
+    ev.stopPropagation()
+    arrayMove(gTodos, idx, idx+1)
+    renderTodos()
+}
+
+function removeArrow() {
+    var elBtnUp = document.querySelectorAll('.btn-up')
+    var elBtnDown = document.querySelectorAll('.btn-down')
+    elBtnUp[0].style.display = 'none'
+    elBtnDown[gTodos.length - 1].style.display = 'none'
+}

@@ -1,10 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color:lightcyan;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
 }
 
 .todos {
   padding: 0;
   list-style: none;
+  font-size: 1.5em
 }
 
 .todo {
@@ -18,28 +37,34 @@ body {
 }
 
 .todo .btns {
-  float:right;
+  float: right;
 }
 
 .btn {
   cursor: pointer;
-  color:cadetblue;
-  background-color: aquamarine;
-  border:0;
+  color: aliceblue;
+  background-color: #fa9406;
+  border: 0;
   border-radius: 4px;
 }
-
+.status-filter{
+  margin: 0 auto;
+}
 .btn:hover {
   background-color: cornflowerblue;
-  color:white;
+  color: white;
 }
 
 .btn-danger {
-  background-color: lightsalmon;
+  background-color: rgba(140, 78, 24, 0.74);
 }
 
-
-
+button {
+  width: fit-content;
+  border: 1px solid grey;
+  background-color: rgba(44, 56, 70, 0.71);
+  border-radius: 5px;
+}
 
 /* .todo::before {
   content: " ";
@@ -54,5 +79,14 @@ body {
   content: "\2022";
 } */
 
+.todos-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
 
-
+.flex {
+  display: flex;
+}
